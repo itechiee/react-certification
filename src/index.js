@@ -8,7 +8,16 @@ import { createStore, applyMiddleware } from 'redux';
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 
-const store = createStore(rootReducer, { products: [] }, applyMiddleware(thunk));
+const store = createStore(rootReducer, 
+		{ 
+			products: [], 
+			cart:{
+				cartProduct:[],
+				addedItem:[],
+				total: 0
+			} 
+		}, 
+		applyMiddleware(thunk));
 
 ReactDOM.render(
 	<Provider store={store} >	

@@ -2,7 +2,7 @@ import  axios  from 'axios';
 import { apiProductsUrl } from '../config/settings';
 
 export const PRODUCTS_LOADED = 'PRODUCTS_LOADED';
-
+export const ADD_TO_CART = 'ADD_TO_CART';
 export const productLoaded = (products) => {
     return {
       type: PRODUCTS_LOADED,
@@ -21,4 +21,12 @@ export const getProducts = () => {
             });
       }
       
+  }
+
+  export const addToCart = (product) => {
+    let cartProduct = product;
+    return {
+      type: ADD_TO_CART,
+      cartProduct
+    }
   }

@@ -21,7 +21,7 @@ class ProductList extends Component {
     //               ];
 
     const { products } = this.props;
-    console.log(products);
+    // console.log(products);
     if(products.length === 0 ) {
       return (
           <p> No product found... </p>
